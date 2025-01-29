@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CALCULADORA DE FINANZAS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>GASTOS E INGRESOS</h1>
+  <div>
+    <label for="monto">Monto:</label>
+    <input type="number" id="monto" placeholder="Ingresa el monto" required>
+    <div id="errorMonto" class="error"></div>
+    
+    <label for="descripcion">Descripción:</label>
+    <input type="text" id="descripcion" placeholder="Describe la transacción" required>
+    <div id="errorDescripcion" class="error"></div>
+  
+    <button id="agregarIngreso">Agregar Ingreso</button>
+    <button id="agregarGasto">Agregar Gasto</button>
+  </div>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Monto</th>
+        <th>Descripción</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody id="tablaCuerpo">
+    </tbody>
+  </table>
+
+  <div class="balance">
+    <strong>Total:</strong> <span id="balance">0.00</span> MXN
+  </div>
+
+  <script src="./js/calculadora.js"></script>
+</body>
+</html>
